@@ -14,6 +14,7 @@
 		D1CE5F38229AAAE000E9DA61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CE5F36229AAAE000E9DA61 /* LaunchScreen.storyboard */; };
 		D1CE5F43229AAAE000E9DA61 /* SkeletonViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE5F42229AAAE000E9DA61 /* SkeletonViewTests.swift */; };
 		D1CE5F4E229AAAE000E9DA61 /* SkeletonViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE5F4D229AAAE000E9DA61 /* SkeletonViewUITests.swift */; };
+		D1CE5F5D229AAC8400E9DA61 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CE5F5C229AAC8400E9DA61 /* SkeletonView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D1CE5F49229AAAE000E9DA61 /* SkeletonViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkeletonViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CE5F4D229AAAE000E9DA61 /* SkeletonViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewUITests.swift; sourceTree = "<group>"; };
 		D1CE5F4F229AAAE000E9DA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1CE5F5C229AAC8400E9DA61 /* SkeletonView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkeletonView.framework; path = Carthage/Build/iOS/SkeletonView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CE5F5D229AAC8400E9DA61 /* SkeletonView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				D1CE5F41229AAAE000E9DA61 /* SkeletonViewTests */,
 				D1CE5F4C229AAAE000E9DA61 /* SkeletonViewUITests */,
 				D1CE5F2B229AAADF00E9DA61 /* Products */,
+				D1CE5F5B229AAC8400E9DA61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = SkeletonViewUITests;
 			sourceTree = "<group>";
 		};
+		D1CE5F5B229AAC8400E9DA61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1CE5F5C229AAC8400E9DA61 /* SkeletonView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +147,7 @@
 				D1CE5F26229AAADF00E9DA61 /* Sources */,
 				D1CE5F27229AAADF00E9DA61 /* Frameworks */,
 				D1CE5F28229AAADF00E9DA61 /* Resources */,
+				D1CE5F5E229AAC8A00E9DA61 /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -250,6 +263,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1CE5F5E229AAC8A00E9DA61 /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SkeletonView.framework",
+			);
+			name = "Carthage Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1CE5F26229AAADF00E9DA61 /* Sources */ = {
@@ -434,6 +469,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TFJU46RGA2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SkeletonView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +491,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TFJU46RGA2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SkeletonView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
